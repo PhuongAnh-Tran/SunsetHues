@@ -1,16 +1,6 @@
 import { OpenAI } from 'openai';
 import cors from 'cors';
 
-const corsOptions = {
-  origin: 'https://your-frontend-domain.com', // or '*' for development
-  // you can add additional options here if needed
-};
-
-app.use(cors(corsOptions));
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
 /**
  * Generate a creative sunset description using AI via chat completions.
  * @param {Object} weatherData - Weather details (clouds, humidity, sunset).
