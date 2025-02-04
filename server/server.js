@@ -17,12 +17,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
 app.use(express.json());
-app.use(cors());
 
 app.post('/api/generate-description', async (req, res) => {
   try {
