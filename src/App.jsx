@@ -31,7 +31,7 @@ const App = () => {
       const basePrediction = predictSunset(selectedForecast);
   
       // Call the backend endpoint for an AI-generated description
-      const response = await fetch('https://sunsethues.onrender.com', {
+      const response = await fetch('https://sunsethues.onrender.com/api/generate-description', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(selectedForecast),
