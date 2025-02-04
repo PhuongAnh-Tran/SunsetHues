@@ -12,6 +12,16 @@ console.log('OPENAI_API_KEY:', process.env.OPENAI_API_KEY);
 
 const app = express();
 
+const corsOptions = {
+  origin: 'https://your-frontend-domain.com', // or '*' for development
+  // you can add additional options here if needed
+};
+
+app.use(cors(corsOptions));
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
 app.use(express.json());
 app.use(cors());
 
