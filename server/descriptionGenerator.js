@@ -1,7 +1,12 @@
 import { OpenAI } from 'openai';
+import cors from 'cors';
 
-console.log('Inside descriptionGenerator, OPENAI_API_KEY:', process.env.OPENAI_API_KEY);
+const corsOptions = {
+  origin: 'https://your-frontend-domain.com', // or '*' for development
+  // you can add additional options here if needed
+};
 
+app.use(cors(corsOptions));
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
