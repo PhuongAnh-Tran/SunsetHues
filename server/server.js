@@ -13,8 +13,7 @@ console.log('OPENAI_API_KEY:', process.env.OPENAI_API_KEY);
 const app = express();
 
 const corsOptions = {
-  origin: 'https://your-frontend-domain.com', // or '*' for development
-  // you can add additional options here if needed
+  origin: 'https://sunset-hues-predictor.com/'
 };
 
 app.use(cors(corsOptions));
