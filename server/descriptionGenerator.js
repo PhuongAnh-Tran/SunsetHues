@@ -1,5 +1,10 @@
-import { OpenAI } from 'openai';
+import { Configuration, OpenAIApi } from 'openai';
 import cors from 'cors';
+
+const configuration = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+const openai = new OpenAIApi(configuration);
 
 /**
  * Generate a creative sunset description using AI via chat completions.
