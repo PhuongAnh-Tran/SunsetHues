@@ -13,7 +13,7 @@ console.log('OPENAI_API_KEY:', process.env.OPENAI_API_KEY);
 const app = express();
 
 const corsOptions = {
-  origin: 'https://sunset-hues.onrender.com/'
+  origin: 'https://sunset-hues.onrender.com'
 };
 
 app.use(cors(corsOptions));
